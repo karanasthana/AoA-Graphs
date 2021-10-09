@@ -1,12 +1,9 @@
 import java.lang.Math;
-import java.util.*;
 
 public class RandomGraphGenerator {
     
     public static int[][] generateRandomGraph(int numNodes, boolean selfCycles) {
         int[][] arr = new int[numNodes][numNodes];
-        // double[] rand = new double[numNodes * numNodes];
-        // double[] rand2 = new double[numNodes * numNodes];
 
         System.out.println("number of nodes are - " + numNodes);
 
