@@ -6,7 +6,7 @@ public class FindCycle {
     static ArrayList<ArrayList<Integer>> adjListArray;
 
     public static void main(String ... args) {
-        int brr[][] = RandomGraphGenerator.generateRandomGraph(5, false);
+        int brr[][] = RandomGraphGenerator.generateRandomGraph(6, false);
 
         adjListArray = convert(brr);
         visited = new boolean[brr.length];
@@ -74,7 +74,7 @@ public class FindCycle {
         return false;
     }
 
-        // Function to convert adjacency
+    // Function to convert adjacency
     // list to adjacency matrix
     static ArrayList<ArrayList<Integer>> convert(int[][] a)
     {
@@ -100,47 +100,4 @@ public class FindCycle {
          
         return adjListArray;
     }
-
-//     public static boolean checkCycle(int graph[][]) {
-//         int numVertices = graph.length;
-//         for (int i=0; i<numVertices; i++) {
-//             visited[i] = false;
-//         }
-
-//         for (int i=0; i<numVertices; i++) {
-//             System.out.println("Checking for i = " + i);
-//             System.out.println("Printing Visited array - ");
-//             for (int j=0; j<numVertices; j++) {
-//                 System.out.print(visited[j] + " ");
-//             }
-//             System.out.println();
-//             if (!visited[i]) {
-//                 if (isCyclicUtil(graph, i, visited, -1)) {
-//                     return true;
-//                 }
-//             }
-//         }
-//         return false;
-//     }
-
-//     public static boolean isCyclicUtil(int graph[][], int v, boolean visited[], int parent) {
-//         System.out.println("Changing visited value for " + (v+1));
-//         visited[v] = true;
-//         System.out.println("Checking for " + (v+1) + " with parent " + (parent+1));
-
-//         for (int i=0; i<visited.length; i++) {
-//             if (graph[i][v] != 1) {
-//                 continue;
-//             }
-
-//             if (visited[i] != true) {
-//                 return isCyclicUtil(graph, i, visited, v);
-//             } else if (i != parent) {
-//                 System.out.println("Returning true for " + (i+1));
-//                 return true;
-//             }
-//         }
-//         return false;
-//     }
-// }
 }
